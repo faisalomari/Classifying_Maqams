@@ -2,6 +2,8 @@ import os
 import torchaudio
 import torch
 from torch.utils.data import Dataset
+import torch.nn as nn
+import torch.nn.functional as F
 
 class MaqamDataset(Dataset):
     def __init__(self, mode='train', transform=None):
@@ -11,6 +13,7 @@ class MaqamDataset(Dataset):
 
         self.maqams = ['Ajam', 'Bayat', 'Hijaz', 'Kurd', 'Nahawand', 'Rast', 'Saba', 'Seka']
         self.audio_list = self._load_audio_list()
+        self.data = [self.__getitem__(i) for i in range(len(self))]
 
     def _load_audio_list(self):
         audio_list = []
@@ -29,3 +32,9 @@ class MaqamDataset(Dataset):
         if self.transform:
             waveform = self.transform(waveform)
         return waveform, label_idx
+    
+    def pad_to_max_length(self, max_length):
+        for i in range(len(self)):
+            padded_data = F.pad(self.data[i][0], (0, max_length - len(self.data[i][0])), 'constant', 0)
+            self.data[i] = (padded_data, self.data[i][1])
+            
