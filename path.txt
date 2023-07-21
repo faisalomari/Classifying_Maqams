@@ -1,2 +1,0 @@
-r"C:\Users\omari\Documents\GitHub\smalldataset"
-r"C:\Users\omari\Documents\GitHub\Maqam478"
