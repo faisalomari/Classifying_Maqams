@@ -1,12 +1,6 @@
 <h1>Classifying_Maqams</h1>
 
-<p>Bs.c project that aims to detect and classify using maqam in audio file using deep learning algorithms.</p>
-
-<h2>By:</h2>
-<ul>
-  <li>Faisal Omari, Bs.c student in Etgar program (University of Haifa).</li>
-  <li>Mayas Ghantous, Bs.c student in Etgar program (University of Haifa).</li>
-</ul>
+<p>Bs.c project that aims to detect and classify Maqams of Quranic recitations using Machine Learning and Deep Learning.</p>
 
 <h2>Project Overview:</h2>
 <p>
