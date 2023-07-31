@@ -23,15 +23,21 @@ def compute_zcr_mean(audio_signal, sample_rate):
     return zcr_mean
 
 
-def compute_chroma_mean(audio_signal, sample_rate):
+def compute_chroma_mean(audio_signal, sample_rate, option=1):
     # Compute the chroma feature
     chroma = librosa.feature.chroma_stft(y=audio_signal, sr=sample_rate)
 
-    # Compute the mean across the chroma feature for each time frame
-    chroma_mean = np.mean(chroma, axis=1)
-    # chroma_mean2 = np.mean(chroma_mean, axis=0)
+    # Compute the mean across the chroma feature for each time frame≈
 
-    return chroma_mean
+    chroma_mean = np.mean(chroma, axis=1)
+    chroma_mean2 = np.mean(chroma_mean, axis=0)
+    if option==1:
+        return chroma_mean
+    elif option==2:
+        return chroma_mean2
+    else:
+        return chroma_mean
+    
 
 
 def compute_rms_energy(audio_signal, sample_rate):
@@ -81,7 +87,8 @@ def get_all_features(audio_file):
     audio_signal, sample_rate = librosa.load(audio_file, sr=None)
     mfcc_mean = compute_mfcc_mean(audio_signal, sample_rate)
     # zcr_mean = compute_zcr_mean(audio_signal, sample_rate)
-    # chroma_mean = compute_chroma_mean(audio_signal, sample_rate)
+    # chroma_mean = compute_chroma_mean(audio_signal, sample_rate, option=1)
+    # chroma_mean2 = compute_chroma_mean(audio_signal, sample_rate, option=2)
     # rms_energy = compute_rms_energy(audio_signal, sample_rate)
     # spectral_centroid_mean = compute_spectral_centroid_mean(audio_signal, sample_rate)
     # spectral_bandwidth_mean = compute_spectral_bandwidth_mean(audio_signal, sample_rate)
@@ -90,6 +97,7 @@ def get_all_features(audio_file):
     features = mfcc_mean
     # features = np.append(features, zcr_mean)
     # features = np.append(features, chroma_mean)
+    # features = np.append(features, chroma_mean2)
     # features = np.append(features, rms_energy)
     # features = np.append(features, spectral_centroid_mean)
     # features = np.append(features, spectral_bandwidth_mean)

@@ -43,9 +43,9 @@ def copy_files_with_incrementing_numbers(input_folder, output_folder, classes, r
                 next_number += 1
 
 # Example usage:
-reader_name = 'Faisal'
+reader_name = 'Saed_ghamdi'
 input_folder = "/home/faisal/Desktop/MAQAMAT/mp3_maqamat/Readers/" + reader_name
-output_folder = "/home/faisal/Desktop/datasetfull"
+output_folder = "/home/faisal/Desktop/datafullll"
 classes = ['Ajam', 'Bayat', 'Hijaz', 'Kurd', 'Nahawand', 'Rast', 'Saba', 'Seka']
 
 copy_files_with_incrementing_numbers(input_folder, output_folder, classes, reader_name)
