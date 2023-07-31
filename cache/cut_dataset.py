@@ -3,11 +3,11 @@ import soundfile as sf
 import librosa
 import wave
 
-data_dir = r"C:\Users\USER\Documents\GitHub\newdataset_cutten"
-output_dir = r"C:\Users\USER\Documents\GitHub\newdataset_cutten2"
+data_dir = "/home/faisal/Desktop/MAQAMAT/Maqam478/Dataset"
+output_dir = "/home/faisal/Desktop/MAQAMAT/Maqam478/Dataset2"
 
 # Set desired length in seconds
-length = 10
+length = 30
 
 # Loop through each maqam folder
 for maqam in os.listdir(data_dir):

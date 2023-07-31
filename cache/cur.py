@@ -8,13 +8,10 @@ root = tk.Tk()
 root.withdraw()
 
 # open file dialog box to choose WAV file
-file_path = filedialog.askopenfilename(
-    title="Select WAV File",
-    filetypes=[("WAV Files", "*.wav")]
-)
+file_path = "/home/faisal/Desktop/MAQAMAT/mp3_maqamat/Readers/raed/wavFiles/seka3_05.wav"
 
 # ask user to specify cut length in seconds
-cut_length = 10
+cut_length = 180
 
 # open WAV file for reading
 with wave.open(file_path, 'rb') as wave_read:
