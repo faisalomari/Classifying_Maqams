@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Classifying_Maqams</title>
-</head>
-<body>
+
+<title>Classifying_Maqams</title>
 
 <h1>Classifying_Maqams</h1>
 
@@ -76,11 +72,5 @@ conda activate maqam_env
 
 <p>Detailed instructions for each stage of the project can be found in their respective folders.</p>
 
-<p>For any questions or issues, feel free to open an issue or contact the contributors.</p>
+<p>For any questions or issues, feel free to open an issue or contact the contributors at <a href="mailto:faisalomari321@gmail.com">faisalomari321@gmail.com</a>.</p>
 
-<h2>License</h2>
-
-<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
-
-</body>
-</html>
