@@ -1,0 +1,45 @@
+How to Run the Maqam Classification Project:
+
+1. Install Required Packages:
+   - Open a terminal or command prompt.
+   - Navigate to the project directory.
+   - Run the following command to install the required packages:
+     ```
+     pip install -r requirements.txt
+     ```
+
+2. Download the Dataset:
+   - Download the dataset from the provided link and unzip it.
+   link: https://figshare.com/articles/dataset/_b_699Maqam_dataset_b_/23837601
+   - Make sure that the dataset is organized according to the project structure.
+
+3. Update Dataset Path:
+   - Open the `MaqamDataset.py` file.
+   - Update the `data_dir` variable to point to the path of the downloaded and organized dataset.
+
+4. Running the Jupyter Notebook:
+   - Open the `maqamat.ipynb` Jupyter Notebook file.
+   - Make sure you have Jupyter Notebook or Jupyter Lab installed.
+   - Update the necessary configurations and hyperparameters if needed.
+   - Execute the notebook cells step by step.
+
+5. Exploring Results:
+   - The Jupyter Notebook will guide you through loading data, training models, and evaluating results.
+   - Various visualizations and metrics will be displayed to help you analyze the model's performance.
+
+6. Customizing and Experimenting:
+   - Feel free to experiment with different model architectures, hyperparameters, and preprocessing steps.
+   - You can modify the code in the notebook to explore and refine your models.
+
+7. Questions and Issues:
+   - If you encounter any issues or have questions, refer to the GitHub repository for troubleshooting.
+   - You can open an issue on the repository or contact the contributors for assistance.
+
+Contributors:
+- Faisal Omari (faisalomari321@gmail.com)
+- Mayas Ghantous
+
+GitHub Repository:
+- Repository Link: <https://github.com/faisalomari/Classifying_Maqams>
+
+Happy coding and exploring the world of Maqam Classification!
